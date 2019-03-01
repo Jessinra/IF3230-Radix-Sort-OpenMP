@@ -18,10 +18,11 @@ Program & Laporan
 Program & Laporan
 
 #### [Laporan Pengerjaan]
-##### Solusi Paralel
+##### I. Solusi Paralel
 Dalam melakukan sort, kami menggunakan 2 buat array. Yaitu array **unsorted** dan **sorted**. Unsorted digunakan untuk menyimpan array yang belum diurutkan, sedangkan yang sorted digunakan untuk menyimpan array yang telah diurutkan.
 
 ![](pictures/mod.jpg)
+
 Radix sort yang kelompok kami buat menggunakan basis 2^8 = 256. 8 merupakan representasi dari jumlah bit yang digunakan. Untuk tiap angka, akan di modulo 256 dan kemudian di _sort_ menggunakan **Count Sort**.
 
 **Count Sort** inilah yang akan dilakukan secara paralel.
@@ -29,19 +30,20 @@ Radix sort yang kelompok kami buat menggunakan basis 2^8 = 256. 8 merupakan repr
 Count Sort dilakukan sebanyak 4 kali karena terdapat 32 bit dalam integer, dan dalam satu iterasi Radix Sort, menggunakan 8 bit. Untuk iterasi ke-i, angka akan dibagi dengan 256^i.
 
 ![](pictures/swap.jpg)
+
 Dalam melakukan perulangan sort, array yang ditampung dalam **sorted array**, diswap dan disimpan dalam **unsorted array** agar tidak boros menggunakan memori.
 
-##### Analisis Solusi
+##### II. Analisis Solusi
 Dari solusi Radix Sort yang kami buat, bagian yang dapat diparalelkan hanya bagian komputasi pada *processor* (*Count Sort*) sehingga hasil serial maupun paralel tidak berbeda jauh dan bahkan kemungkinan besar hasil paralel lebih lama karena beban yang dilakukan untuk memproses bertambah.
 
 Berbeda hal jika array yang diperlu di *sort* merupakan hasil baca dari file external (seperti csv). Apabila dilakukan secara paralel, maka hasilnya lebih cepat karena melakukan paralelisasi terhadap proses I/O.
 
 Dari solusi permasalahan radix sort yang dibuat oleh kelompok kami secara paralel, tidak ada solusi lain yang lebih optimal.
 
-##### Jumlah Thread
+##### III. Jumlah Thread
 Thread yang digunakan 4. Hal ini karena by default, mesin yang digunakan menggunakan *multicore* dan *hyperthread* sehingga total thread sebanyak 4.
 
-##### Pengukuran Kinerja
+##### IV. Pengukuran Kinerja
 | N | Block | Serial | Paralel |
 |--------|---------|---------|---------|
 | 400000 | 2 | ![](pictures/serial_400000_block2.jpg) | ![](pictures/paralel_400000_block2.jpg) |
@@ -66,7 +68,7 @@ Thread yang digunakan 4. Hal ini karena by default, mesin yang digunakan menggun
 |5000 | 16 | ![](pictures/serial_5000_block16.jpg) | ![](pictures/paralel_5000_block16.jpg) |
 
 
-##### Analisis Perbandingan Kinerja
+##### V. Analisis Perbandingan Kinerja
 Setelah dilakukan pengukuran kinerja, diketahui bahwa dalam 10 iterasi, didapatkan hasil bahwa:
 
 ##### Untuk N = 400000
