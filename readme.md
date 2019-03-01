@@ -44,24 +44,41 @@ Dari solusi permasalahan radix sort yang dibuat oleh kelompok kami secara parale
 Thread yang digunakan 4. Hal ini karena by default, mesin yang digunakan menggunakan *multicore* dan *hyperthread* sehingga total thread sebanyak 4.
 
 ##### IV. Pengukuran Kinerja
+##### Untuk N = 400000
 | N | Block | Serial | Paralel |
 |--------|---------|---------|---------|
 | 400000 | 2 | ![](pictures/serial_400000_block2.jpg) | ![](pictures/paralel_400000_block2.jpg) |
 |400000 | 4 | ![](pictures/serial_400000_block4.jpg) | ![](pictures/paralel_400000_block4.jpg) |
 | 400000 | 8 | ![](pictures/serial_400000_block8.jpg) | ![](pictures/paralel_400000_block8.jpg) |
 |400000 | 16 | ![](pictures/serial_400000_block16.jpg) | ![](pictures/paralel_400000_block16.jpg) |
+
+##### Untuk N = 200000
+| N | Block | Serial | Paralel |
+|--------|---------|---------|---------|
 | 200000 | 2 | ![](pictures/serial_200000_block2.jpg) | ![](pictures/paralel_200000_block2.jpg) |
 |200000 | 4 | ![](pictures/serial_200000_block4.jpg) | ![](pictures/paralel_200000_block4.jpg) |
 | 200000 | 8 | ![](pictures/serial_200000_block8.jpg) | ![](pictures/paralel_200000_block8.jpg) |
 |200000 | 16 | ![](pictures/serial_200000_block16.jpg) | ![](pictures/paralel_200000_block16.jpg) |
+
+##### Untuk N = 100000
+| N | Block | Serial | Paralel |
+|--------|---------|---------|---------|
 | 100000 | 2 | ![](pictures/serial_100000_block2.jpg) | ![](pictures/paralel_100000_block2.jpg) |
 |100000 | 4 | ![](pictures/serial_100000_block4.jpg) | ![](pictures/paralel_100000_block4.jpg) |
 | 100000 | 8 | ![](pictures/serial_100000_block8.jpg) | ![](pictures/paralel_100000_block8.jpg) |
 |100000 | 16 | ![](pictures/serial_100000_block16.jpg) | ![](pictures/paralel_100000_block16.jpg) |
+
+##### Untuk N = 50000
+| N | Block | Serial | Paralel |
+|--------|---------|---------|---------|
 | 50000 | 2 | ![](pictures/serial_50000_block2.jpg) | ![](pictures/paralel_50000_block2.jpg) |
 |50000 | 4 | ![](pictures/serial_50000_block4.jpg) | ![](pictures/paralel_50000_block4.jpg) |
 | 50000 | 8 | ![](pictures/serial_50000_block8.jpg) | ![](pictures/paralel_50000_block8.jpg) |
 |50000 | 16 | ![](pictures/serial_50000_block16.jpg) | ![](pictures/paralel_50000_block16.jpg) |
+
+##### Untuk N = 5000
+| N | Block | Serial | Paralel |
+|--------|---------|---------|---------|
 | 5000 | 2 | ![](pictures/serial_5000_block2.jpg) | ![](pictures/paralel_5000_block2.jpg) |
 |5000 | 4 | ![](pictures/serial_5000_block4.jpg) | ![](pictures/paralel_5000_block4.jpg) |
 | 5000 | 8 | ![](pictures/serial_5000_block8.jpg) | ![](pictures/paralel_5000_block8.jpg) |

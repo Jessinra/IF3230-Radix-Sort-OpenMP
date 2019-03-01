@@ -119,7 +119,7 @@ int main(int argc, char *argv[])
     for (int i = 0; i < repeat; i++)
     {
 
-        printf("Sorting for %d", NUM_OF_ELEMENT);
+        // printf("Sorting for %d", NUM_OF_ELEMENT);
         generate_number(unsorted, NUM_OF_ELEMENT);
 
         // ignore CLOCK_MONOTONIC warning
@@ -129,11 +129,13 @@ int main(int argc, char *argv[])
 
         elapsed_time = get_elapsed_time(start, end);
         total_elapsed_time += elapsed_time;
-        printf("\nTime elapsed (microsec) iter %d : %lg", i, elapsed_time);
+        // printf("\nTime elapsed (microsec) iter %d : %lg", i, elapsed_time);
 
     }
-    printf("\nTime average elapsed (microsec) : %lg\n", total_elapsed_time / repeat);
-    
+    // printf("\nTime average elapsed (microsec) : %lg\n", total_elapsed_time / repeat);
 
+    swap(&unsorted, &sorted);
+    display_output(sorted, NUM_OF_ELEMENT);
+    
     return 0;
 }
